@@ -15,21 +15,23 @@ La arquitectura muestra una aplicación web compuesta por un cliente y un servid
 
 ## 🔎 Proceso de configuración
 
-1. Creación de una aplicación Spring Boot utilizando Maven, incluyendo las dependencias necesarias para su correcta ejecución..
+1. Creación de una aplicación Spring Boot utilizando Maven, incluyendo las dependencias necesarias para su correcta ejecución.
 
 2. Invocación de la Máquina Virtual de Java (JVM) desde la línea de comandos para ejecutar la aplicación de forma local.
 
     <img src="img/local.png" width="300"/>
 
-3. Configuración del archivo Dockerfile para la construcción de la imagen y la creación de tres instancias del contenedor en Docker.
+3. Configuración del archivo Dockerfile para construir la imagen y, a partir de esta, desplegar tres contenedores en Docker.
 
     <img src="img/instancias.png" width="350"/>
 
-4. Despliegue y ejecución del archivo docker-compose, mostrando a continuación el resumen del proceso en Docker Desktop.
+4. Despliegue y ejecución del archivo docker-compose. 
+
+    Resumen del proceso en Docker Desktop.
 
     <img src="img/dockerDesktop.png" width="700"/>
 
-5. Creación de un repositorio en Docker Hub y carga de la imagen creada al repositorio. 
+5. Creación de un repositorio en Docker Hub y carga de la imagen al repositorio. 
 
     <img src="img/dockerHub.png" width="700"/>
 
