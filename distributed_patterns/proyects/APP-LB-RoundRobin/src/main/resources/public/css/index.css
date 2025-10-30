@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+.myTitle{
+    font-family: 'Handlee', cursive;
+    color: rgba(255, 0, 0, 0.685);
+    font-size: 60px;
+    text-align: center;
+    margin-top: 35px;
+}
+.myInput{
+    width: 20%;
+}
+
+.myCol{
+    font-family: 'Handlee', cursive;
+}
+.container{
+    margin-top: 3%;
+}

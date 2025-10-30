@@ -1,0 +1,43 @@
+version: '2'
+
+
+services:
+  loadbalancer:
+    build:
+      context: ./APP-LB-RoundRobin
+      dockerfile: Dockerfile
+    container_name: loadbalancer
+    ports:
+      - "8087:4567"
+
+  web1:
+    build:
+      context: ./demo
+      dockerfile: Dockerfile
+    container_name: web1
+    ports:
+      - "8080:8080"
+
+  web2:
+    build:
+      context: ./demo
+      dockerfile: Dockerfile
+    container_name: web2
+    ports:
+      - "8081:8080"
+
+  web3:
+    build:
+      context: ./demo
+      dockerfile: Dockerfile
+    container_name: web3
+    ports:
+      - "8082:8080"
+
+  front:
+    build:
+      context: ./APP-LB-RoundRobin/src/main/resources/public
+      dockerfile: Dockerfile
+    container_name: front
+    ports:
+      - "8083:80"
