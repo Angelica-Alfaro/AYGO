@@ -7,7 +7,7 @@ var apiclient = (function () {
 
     var saveString = function (myString) {
         return $.ajax({
-            url: "http://localhost:8087/string",
+            url: "http://ec2-3-82-36-94.compute-1.amazonaws.com:8087/string",
             type: "POST",
             data: myString,
             contentType: "application/x-www-form-urlencoded",
