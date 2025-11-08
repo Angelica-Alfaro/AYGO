@@ -63,8 +63,10 @@ El servicio Ride representa el viaje y contiene la información relacionada con 
 
 2. Configuración del API Gateway, Lambdas y EC2 en AWS.
 
-    <img src="img/dockerDesktop.png" width="600"/>
+    <img src="img/apigateway.png" width="600"/>
+    <img src="img/lambda.png" width="600"/>
+    <img src="img/ec2.png" width="600"/>
 
 3. Relización de pruebas desde Postman. 
 
-    <img src="img/dockerHub.png" width="600"/>
+    <img src="img/postman.png" width="600"/>
