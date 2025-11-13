@@ -1,4 +1,4 @@
-# Distributed patterns 💻
+# Microservices 💻
 
 ### María Angélica Alfaro Fandiño
 
