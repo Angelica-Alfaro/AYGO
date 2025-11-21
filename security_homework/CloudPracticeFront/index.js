@@ -9,7 +9,7 @@ function create() {
 	var clientName = document.getElementById("name").value;
 	$.ajax({
 		type: "POST",
-		url: "http://ec2-54-166-20-248.compute-1.amazonaws.com:8080/client",
+		url: "http://localhost:8080/client",
 		contentType: "application/json",
 		data: JSON.stringify({
 			name: clientName
@@ -23,7 +23,7 @@ function create() {
 
 function getClients() {
 	$.ajax({
-		url: "http://ec2-54-166-20-248.compute-1.amazonaws.com:8080/clients",
+		url: "http://localhost:8080/clients",
 		success: function(result) {
 			result.forEach(record => {
 				addRecord(record)

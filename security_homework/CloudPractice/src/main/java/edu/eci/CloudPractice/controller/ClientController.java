@@ -1,6 +1,8 @@
 package edu.eci.CloudPractice.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,18 +21,16 @@ public class ClientController {
 	
 	@GetMapping()
     public String test() {
-    	
         return "Test";
     }
 	
     @GetMapping("/clients")
-    public List<Client> getAll() {
-    	
+    public HashMap<UUID, Client> getAll() {
         return clienteService.getAll();
     }
     
     @PostMapping("/client")
-    public Client save(@RequestBody  ClientDto clientDto) {
+    public Client save(@RequestBody ClientDto clientDto) {
     	Client client = new Client(clientDto.getName());
         return clienteService.create(client);
     }
