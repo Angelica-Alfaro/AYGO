@@ -31,8 +31,8 @@ public class SecurityConfig {
 
         http
             .csrf(csrf -> csrf.disable())
+            .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.POST, "/client", "/client/").permitAll()
                 .requestMatchers(HttpMethod.GET, "/clients").permitAll()
                 .anyRequest().authenticated()
             )
@@ -42,25 +42,19 @@ public class SecurityConfig {
 
         return http.build();
     }
+
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-
-        // PERMITIR origenes (si se carga desde file:// origin = null)
-        config.setAllowedOriginPatterns(List.of("*")); 
-        // O si tienes un front específico:
-        // config.setAllowedOrigins(List.of("http://localhost:3000"));
-
-        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        // permitir orígenes (en desarrollo puedes usar "*", en prod restringe)
+        config.setAllowedOriginPatterns(List.of("*"));
+        config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
-
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
-
         return source;
     }
-
 
     @Bean
     public JwtDecoder jwtDecoder() {

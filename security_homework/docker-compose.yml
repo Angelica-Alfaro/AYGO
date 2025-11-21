@@ -1,0 +1,18 @@
+services:
+  app_back:
+    build:
+      context: .
+      dockerfile: CloudPractice/Dockerfile
+    container_name: practice-cloud-back
+    ports:
+      - "8080:8080" 
+
+  app_front:
+    build:
+      context: .
+      dockerfile: CloudPracticeFront/Dockerfile
+    container_name: practice-cloud-front
+    ports:
+      - "5000:80" 
+    depends_on:
+      - app_back
