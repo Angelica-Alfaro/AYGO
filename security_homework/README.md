@@ -65,19 +65,26 @@ El modelo Zero Trust se fundamenta en la premisa de “nunca confiar, siempre ve
 #### ***Postman***
 
 1. Solicitud sin token - 401 Unauthorized.
+
     <img src="img/postman_401.png" width="600"/>
 
 2. Obtención del token.
+
     <img src="img/postman_token.png" width="600"/>
 
 3. Envío de solicitudes autenticadas mediante el token obtenido.
+
     <img src="img/postman_ok.png" width="600"/>
+
     <img src="img/postman_get.png" width="600"/>
+
 
 #### ***frontend***
 
 1. Solicitud sin token - 401 Unauthorized.
+
     <img src="img/front_401.png" width="600"/>
 
 3. Envío de solicitudes autenticadas mediante el token obtenido.
+
     <img src="img/front_ok.png" width="600"/>
