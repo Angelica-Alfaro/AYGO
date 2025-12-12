@@ -1,0 +1,20 @@
+{
+  "version": "38.0.1",
+  "files": {
+    "64d8d4a7991ec580639a9c5fc2b139c71d258fc682fc1691b6e2ae9f1e5e5571": {
+      "source": {
+        "path": "UrlMaliciousLabs.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "919471278046-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-919471278046-us-east-1",
+          "objectKey": "64d8d4a7991ec580639a9c5fc2b139c71d258fc682fc1691b6e2ae9f1e5e5571.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::919471278046:role/cdk-hnb659fds-file-publishing-role-919471278046-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

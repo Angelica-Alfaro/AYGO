@@ -1,0 +1,2221 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "UrlMaliciousLabs": {
+        "id": "UrlMaliciousLabs",
+        "path": "UrlMaliciousLabs",
+        "children": {
+          "models-url-malicious": {
+            "id": "models-url-malicious",
+            "path": "UrlMaliciousLabs/models-url-malicious",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousLabs/models-url-malicious/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_s3.Bucket",
+              "version": "2.173.2"
+            }
+          },
+          "repository": {
+            "id": "repository",
+            "path": "UrlMaliciousLabs/repository",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousLabs/repository/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECR::Repository",
+                  "aws:cdk:cloudformation:props": {
+                    "repositoryPolicyText": {
+                      "Statement": [
+                        {
+                          "Action": [
+                            "ecr:BatchCheckLayerAvailability",
+                            "ecr:BatchGetImage",
+                            "ecr:GetDownloadUrlForLayer"
+                          ],
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ecr.CfnRepository",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_ecr.Repository",
+              "version": "2.173.2"
+            }
+          },
+          "VpcLambda": {
+            "id": "VpcLambda",
+            "path": "UrlMaliciousLabs/VpcLambda",
+            "children": {
+              "PublicSubnet1": {
+                "id": "PublicSubnet1",
+                "path": "UrlMaliciousLabs/VpcLambda/PublicSubnet1",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet2": {
+                "id": "PublicSubnet2",
+                "path": "UrlMaliciousLabs/VpcLambda/PublicSubnet2",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet3": {
+                "id": "PublicSubnet3",
+                "path": "UrlMaliciousLabs/VpcLambda/PublicSubnet3",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet4": {
+                "id": "PublicSubnet4",
+                "path": "UrlMaliciousLabs/VpcLambda/PublicSubnet4",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet5": {
+                "id": "PublicSubnet5",
+                "path": "UrlMaliciousLabs/VpcLambda/PublicSubnet5",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet6": {
+                "id": "PublicSubnet6",
+                "path": "UrlMaliciousLabs/VpcLambda/PublicSubnet6",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet1": {
+                "id": "PrivateSubnet1",
+                "path": "UrlMaliciousLabs/VpcLambda/PrivateSubnet1",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet2": {
+                "id": "PrivateSubnet2",
+                "path": "UrlMaliciousLabs/VpcLambda/PrivateSubnet2",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet3": {
+                "id": "PrivateSubnet3",
+                "path": "UrlMaliciousLabs/VpcLambda/PrivateSubnet3",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet4": {
+                "id": "PrivateSubnet4",
+                "path": "UrlMaliciousLabs/VpcLambda/PrivateSubnet4",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet5": {
+                "id": "PrivateSubnet5",
+                "path": "UrlMaliciousLabs/VpcLambda/PrivateSubnet5",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet6": {
+                "id": "PrivateSubnet6",
+                "path": "UrlMaliciousLabs/VpcLambda/PrivateSubnet6",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.173.2"
+            }
+          },
+          "PrivateAccessSg": {
+            "id": "PrivateAccessSg",
+            "path": "UrlMaliciousLabs/PrivateAccessSg",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.173.2"
+            }
+          },
+          "LogGroup": {
+            "id": "LogGroup",
+            "path": "UrlMaliciousLabs/LogGroup",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousLabs/LogGroup/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Logs::LogGroup",
+                  "aws:cdk:cloudformation:props": {
+                    "logGroupName": "/aws/lambda/UrlMalicious",
+                    "retentionInDays": 3,
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_logs.CfnLogGroup",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_logs.LogGroup",
+              "version": "2.173.2"
+            }
+          },
+          "Function": {
+            "id": "Function",
+            "path": "UrlMaliciousLabs/Function",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "UrlMaliciousLabs/Function/ServiceRole",
+                "children": {
+                  "ImportServiceRole": {
+                    "id": "ImportServiceRole",
+                    "path": "UrlMaliciousLabs/Function/ServiceRole/ImportServiceRole",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.173.2"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "UrlMaliciousLabs/Function/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          },
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+                              ]
+                            ]
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "AzureRepository",
+                            "value": "MasivSms/sms-url-malicious"
+                          },
+                          {
+                            "key": "Component",
+                            "value": "SmsUrlMaliciousApi"
+                          },
+                          {
+                            "key": "CostCenter",
+                            "value": "SMS"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                      "version": "2.173.2"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Role",
+                  "version": "2.173.2"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousLabs/Function/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "imageUri": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                4,
+                                {
+                                  "Fn::Split": [
+                                    ":",
+                                    {
+                                      "Fn::GetAtt": [
+                                        "repository9F1A3F0B",
+                                        "Arn"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            ".dkr.ecr.",
+                            {
+                              "Fn::Select": [
+                                3,
+                                {
+                                  "Fn::Split": [
+                                    ":",
+                                    {
+                                      "Fn::GetAtt": [
+                                        "repository9F1A3F0B",
+                                        "Arn"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            ".",
+                            {
+                              "Ref": "AWS::URLSuffix"
+                            },
+                            "/",
+                            {
+                              "Ref": "repository9F1A3F0B"
+                            },
+                            ":latest"
+                          ]
+                        ]
+                      }
+                    },
+                    "environment": {
+                      "variables": {
+                        "LoggingLevel": "Warning",
+                        "FILE_NAME_MODEL": "trained_model.joblib",
+                        "FILE_NAME_VECTORIZER": "vectorizer.joblib",
+                        "BUCKET_NAME": {
+                          "Ref": "modelsurlmaliciousD24BF224"
+                        }
+                      }
+                    },
+                    "functionName": "UrlMalicious",
+                    "memorySize": 512,
+                    "packageType": "Image",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "FunctionServiceRole675BB04A",
+                        "Arn"
+                      ]
+                    },
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ],
+                    "timeout": 120,
+                    "vpcConfig": {
+                      "subnetIds": [
+                        "subnet-0c8aa45f39bac43ff",
+                        "subnet-0f54781289afd3db7",
+                        "subnet-0eec617d2da6e3cde",
+                        "subnet-022e7b5380a2e6850",
+                        "subnet-064adc425e7575de1",
+                        "subnet-049398f04b75b26fa"
+                      ],
+                      "securityGroupIds": [
+                        "sg-0a4ffe31b7078d9c5"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_lambda.Function",
+              "version": "2.173.2"
+            }
+          },
+          "Policy": {
+            "id": "Policy",
+            "path": "UrlMaliciousLabs/Policy",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousLabs/Policy/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                  "aws:cdk:cloudformation:props": {
+                    "policyDocument": {
+                      "Statement": [
+                        {
+                          "Action": [
+                            "s3:GetObject",
+                            "s3:ListBucket",
+                            "ssm:GetParametersByPath"
+                          ],
+                          "Effect": "Allow",
+                          "Resource": [
+                            "arn:aws:ssm:us-east-1:919471278046:parameter/*",
+                            {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "arn:aws:s3:::",
+                                  {
+                                    "Ref": "modelsurlmaliciousD24BF224"
+                                  },
+                                  "/*"
+                                ]
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "policyName": "Policy23B91518",
+                    "roles": [
+                      {
+                        "Ref": "FunctionServiceRole675BB04A"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_iam.Policy",
+              "version": "2.173.2"
+            }
+          },
+          "VpcApiGateway": {
+            "id": "VpcApiGateway",
+            "path": "UrlMaliciousLabs/VpcApiGateway",
+            "children": {
+              "PublicSubnet1": {
+                "id": "PublicSubnet1",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PublicSubnet1",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet2": {
+                "id": "PublicSubnet2",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PublicSubnet2",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet3": {
+                "id": "PublicSubnet3",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PublicSubnet3",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet4": {
+                "id": "PublicSubnet4",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PublicSubnet4",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet5": {
+                "id": "PublicSubnet5",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PublicSubnet5",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet6": {
+                "id": "PublicSubnet6",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PublicSubnet6",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet1": {
+                "id": "PrivateSubnet1",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PrivateSubnet1",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet2": {
+                "id": "PrivateSubnet2",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PrivateSubnet2",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet3": {
+                "id": "PrivateSubnet3",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PrivateSubnet3",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet4": {
+                "id": "PrivateSubnet4",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PrivateSubnet4",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet5": {
+                "id": "PrivateSubnet5",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PrivateSubnet5",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet6": {
+                "id": "PrivateSubnet6",
+                "path": "UrlMaliciousLabs/VpcApiGateway/PrivateSubnet6",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.173.2"
+            }
+          },
+          "UrlMaliciousApi": {
+            "id": "UrlMaliciousApi",
+            "path": "UrlMaliciousLabs/UrlMaliciousApi",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousLabs/UrlMaliciousApi/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::RestApi",
+                  "aws:cdk:cloudformation:props": {
+                    "apiKeySourceType": "HEADER",
+                    "endpointConfiguration": {
+                      "types": [
+                        "PRIVATE"
+                      ]
+                    },
+                    "name": "UrlMaliciousApi",
+                    "policy": {
+                      "Statement": [
+                        {
+                          "Action": "execute-api:Invoke",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "AWS": "*"
+                          },
+                          "Resource": "*"
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.CfnRestApi",
+                  "version": "2.173.2"
+                }
+              },
+              "Deployment": {
+                "id": "Deployment",
+                "path": "UrlMaliciousLabs/UrlMaliciousApi/Deployment",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "UrlMaliciousLabs/UrlMaliciousApi/Deployment/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Deployment",
+                      "aws:cdk:cloudformation:props": {
+                        "description": "Automatically created by the RestApi construct",
+                        "restApiId": {
+                          "Ref": "UrlMaliciousApiFBBC78E5"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnDeployment",
+                      "version": "2.173.2"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.Deployment",
+                  "version": "2.173.2"
+                }
+              },
+              "DeploymentStage.Labs": {
+                "id": "DeploymentStage.Labs",
+                "path": "UrlMaliciousLabs/UrlMaliciousApi/DeploymentStage.Labs",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "UrlMaliciousLabs/UrlMaliciousApi/DeploymentStage.Labs/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Stage",
+                      "aws:cdk:cloudformation:props": {
+                        "deploymentId": {
+                          "Ref": "UrlMaliciousApiDeploymentF1E2B662a968e58ad95b268e7794e75805862ddf"
+                        },
+                        "restApiId": {
+                          "Ref": "UrlMaliciousApiFBBC78E5"
+                        },
+                        "stageName": "Labs",
+                        "tags": [
+                          {
+                            "key": "AzureRepository",
+                            "value": "MasivSms/sms-url-malicious"
+                          },
+                          {
+                            "key": "Component",
+                            "value": "SmsUrlMaliciousApi"
+                          },
+                          {
+                            "key": "CostCenter",
+                            "value": "SMS"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnStage",
+                      "version": "2.173.2"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.Stage",
+                  "version": "2.173.2"
+                }
+              },
+              "Endpoint": {
+                "id": "Endpoint",
+                "path": "UrlMaliciousLabs/UrlMaliciousApi/Endpoint",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnOutput",
+                  "version": "2.173.2"
+                }
+              },
+              "Default": {
+                "id": "Default",
+                "path": "UrlMaliciousLabs/UrlMaliciousApi/Default",
+                "children": {
+                  "model": {
+                    "id": "model",
+                    "path": "UrlMaliciousLabs/UrlMaliciousApi/Default/model",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "UrlMaliciousLabs/UrlMaliciousApi/Default/model/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::Resource",
+                          "aws:cdk:cloudformation:props": {
+                            "parentId": {
+                              "Fn::GetAtt": [
+                                "UrlMaliciousApiFBBC78E5",
+                                "RootResourceId"
+                              ]
+                            },
+                            "pathPart": "model",
+                            "restApiId": {
+                              "Ref": "UrlMaliciousApiFBBC78E5"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.CfnResource",
+                          "version": "2.173.2"
+                        }
+                      },
+                      "url-malicious": {
+                        "id": "url-malicious",
+                        "path": "UrlMaliciousLabs/UrlMaliciousApi/Default/model/url-malicious",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "UrlMaliciousLabs/UrlMaliciousApi/Default/model/url-malicious/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Resource",
+                              "aws:cdk:cloudformation:props": {
+                                "parentId": {
+                                  "Ref": "UrlMaliciousApimodel55388A97"
+                                },
+                                "pathPart": "url-malicious",
+                                "restApiId": {
+                                  "Ref": "UrlMaliciousApiFBBC78E5"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_apigateway.CfnResource",
+                              "version": "2.173.2"
+                            }
+                          },
+                          "POST": {
+                            "id": "POST",
+                            "path": "UrlMaliciousLabs/UrlMaliciousApi/Default/model/url-malicious/POST",
+                            "children": {
+                              "ApiPermission.UrlMaliciousLabsUrlMaliciousApi958DB491.POST..model.url-malicious": {
+                                "id": "ApiPermission.UrlMaliciousLabsUrlMaliciousApi958DB491.POST..model.url-malicious",
+                                "path": "UrlMaliciousLabs/UrlMaliciousApi/Default/model/url-malicious/POST/ApiPermission.UrlMaliciousLabsUrlMaliciousApi958DB491.POST..model.url-malicious",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                                  "aws:cdk:cloudformation:props": {
+                                    "action": "lambda:InvokeFunction",
+                                    "functionName": {
+                                      "Fn::GetAtt": [
+                                        "Function76856677",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "principal": "apigateway.amazonaws.com",
+                                    "sourceArn": {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:aws:execute-api:us-east-1:919471278046:",
+                                          {
+                                            "Ref": "UrlMaliciousApiFBBC78E5"
+                                          },
+                                          "/",
+                                          {
+                                            "Ref": "UrlMaliciousApiDeploymentStageLabsFCF948A2"
+                                          },
+                                          "/POST/model/url-malicious"
+                                        ]
+                                      ]
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_lambda.CfnPermission",
+                                  "version": "2.173.2"
+                                }
+                              },
+                              "ApiPermission.Test.UrlMaliciousLabsUrlMaliciousApi958DB491.POST..model.url-malicious": {
+                                "id": "ApiPermission.Test.UrlMaliciousLabsUrlMaliciousApi958DB491.POST..model.url-malicious",
+                                "path": "UrlMaliciousLabs/UrlMaliciousApi/Default/model/url-malicious/POST/ApiPermission.Test.UrlMaliciousLabsUrlMaliciousApi958DB491.POST..model.url-malicious",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                                  "aws:cdk:cloudformation:props": {
+                                    "action": "lambda:InvokeFunction",
+                                    "functionName": {
+                                      "Fn::GetAtt": [
+                                        "Function76856677",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "principal": "apigateway.amazonaws.com",
+                                    "sourceArn": {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:aws:execute-api:us-east-1:919471278046:",
+                                          {
+                                            "Ref": "UrlMaliciousApiFBBC78E5"
+                                          },
+                                          "/test-invoke-stage/POST/model/url-malicious"
+                                        ]
+                                      ]
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_lambda.CfnPermission",
+                                  "version": "2.173.2"
+                                }
+                              },
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "UrlMaliciousLabs/UrlMaliciousApi/Default/model/url-malicious/POST/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                                  "aws:cdk:cloudformation:props": {
+                                    "apiKeyRequired": true,
+                                    "authorizationType": "NONE",
+                                    "httpMethod": "POST",
+                                    "integration": {
+                                      "type": "AWS_PROXY",
+                                      "uri": {
+                                        "Fn::Join": [
+                                          "",
+                                          [
+                                            "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                                            {
+                                              "Fn::GetAtt": [
+                                                "Function76856677",
+                                                "Arn"
+                                              ]
+                                            },
+                                            "/invocations"
+                                          ]
+                                        ]
+                                      },
+                                      "integrationHttpMethod": "POST"
+                                    },
+                                    "methodResponses": [
+                                      {
+                                        "statusCode": "200",
+                                        "responseModels": {
+                                          "application/json": "Empty"
+                                        }
+                                      }
+                                    ],
+                                    "resourceId": {
+                                      "Ref": "UrlMaliciousApimodelurlmalicious57C82D22"
+                                    },
+                                    "restApiId": {
+                                      "Ref": "UrlMaliciousApiFBBC78E5"
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_apigateway.CfnMethod",
+                                  "version": "2.173.2"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_apigateway.Method",
+                              "version": "2.173.2"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.Resource",
+                          "version": "2.173.2"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.Resource",
+                      "version": "2.173.2"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.ResourceBase",
+                  "version": "2.173.2"
+                }
+              },
+              "urlMalicious-UsagePlan": {
+                "id": "urlMalicious-UsagePlan",
+                "path": "UrlMaliciousLabs/UrlMaliciousApi/urlMalicious-UsagePlan",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "UrlMaliciousLabs/UrlMaliciousApi/urlMalicious-UsagePlan/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::UsagePlan",
+                      "aws:cdk:cloudformation:props": {
+                        "apiStages": [
+                          {
+                            "apiId": {
+                              "Ref": "UrlMaliciousApiFBBC78E5"
+                            },
+                            "stage": {
+                              "Ref": "UrlMaliciousApiDeploymentStageLabsFCF948A2"
+                            },
+                            "throttle": {}
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "AzureRepository",
+                            "value": "MasivSms/sms-url-malicious"
+                          },
+                          {
+                            "key": "Component",
+                            "value": "SmsUrlMaliciousApi"
+                          },
+                          {
+                            "key": "CostCenter",
+                            "value": "SMS"
+                          }
+                        ],
+                        "usagePlanName": "urlMalicious"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnUsagePlan",
+                      "version": "2.173.2"
+                    }
+                  },
+                  "UsagePlanKeyResource:UrlMaliciousLabsurlmaliciouskey9306A6E9": {
+                    "id": "UsagePlanKeyResource:UrlMaliciousLabsurlmaliciouskey9306A6E9",
+                    "path": "UrlMaliciousLabs/UrlMaliciousApi/urlMalicious-UsagePlan/UsagePlanKeyResource:UrlMaliciousLabsurlmaliciouskey9306A6E9",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::UsagePlanKey",
+                      "aws:cdk:cloudformation:props": {
+                        "keyId": {
+                          "Ref": "urlmaliciouskey0A2908EA"
+                        },
+                        "keyType": "API_KEY",
+                        "usagePlanId": {
+                          "Ref": "UrlMaliciousApiurlMaliciousUsagePlan38958055"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnUsagePlanKey",
+                      "version": "2.173.2"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.UsagePlan",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_apigateway.LambdaRestApi",
+              "version": "2.173.2"
+            }
+          },
+          "url-malicious-key": {
+            "id": "url-malicious-key",
+            "path": "UrlMaliciousLabs/url-malicious-key",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousLabs/url-malicious-key/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::ApiKey",
+                  "aws:cdk:cloudformation:props": {
+                    "enabled": true,
+                    "name": "url-malicious-key",
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.CfnApiKey",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_apigateway.ApiKey",
+              "version": "2.173.2"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "UrlMaliciousLabs/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "UrlMaliciousLabs/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.0.0"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "UrlMaliciousLabs/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.173.2"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "UrlMaliciousLabs/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.173.2"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.173.2"
+        }
+      },
+      "UrlMaliciousProd": {
+        "id": "UrlMaliciousProd",
+        "path": "UrlMaliciousProd",
+        "children": {
+          "models-url-malicious": {
+            "id": "models-url-malicious",
+            "path": "UrlMaliciousProd/models-url-malicious",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousProd/models-url-malicious/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_s3.Bucket",
+              "version": "2.173.2"
+            }
+          },
+          "repository": {
+            "id": "repository",
+            "path": "UrlMaliciousProd/repository",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousProd/repository/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ECR::Repository",
+                  "aws:cdk:cloudformation:props": {
+                    "repositoryPolicyText": {
+                      "Statement": [
+                        {
+                          "Action": [
+                            "ecr:BatchCheckLayerAvailability",
+                            "ecr:BatchGetImage",
+                            "ecr:GetDownloadUrlForLayer"
+                          ],
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_ecr.CfnRepository",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_ecr.Repository",
+              "version": "2.173.2"
+            }
+          },
+          "VpcLambda": {
+            "id": "VpcLambda",
+            "path": "UrlMaliciousProd/VpcLambda",
+            "children": {
+              "PublicSubnet1": {
+                "id": "PublicSubnet1",
+                "path": "UrlMaliciousProd/VpcLambda/PublicSubnet1",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet2": {
+                "id": "PublicSubnet2",
+                "path": "UrlMaliciousProd/VpcLambda/PublicSubnet2",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet3": {
+                "id": "PublicSubnet3",
+                "path": "UrlMaliciousProd/VpcLambda/PublicSubnet3",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet4": {
+                "id": "PublicSubnet4",
+                "path": "UrlMaliciousProd/VpcLambda/PublicSubnet4",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet5": {
+                "id": "PublicSubnet5",
+                "path": "UrlMaliciousProd/VpcLambda/PublicSubnet5",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet6": {
+                "id": "PublicSubnet6",
+                "path": "UrlMaliciousProd/VpcLambda/PublicSubnet6",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet1": {
+                "id": "PrivateSubnet1",
+                "path": "UrlMaliciousProd/VpcLambda/PrivateSubnet1",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet2": {
+                "id": "PrivateSubnet2",
+                "path": "UrlMaliciousProd/VpcLambda/PrivateSubnet2",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet3": {
+                "id": "PrivateSubnet3",
+                "path": "UrlMaliciousProd/VpcLambda/PrivateSubnet3",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet4": {
+                "id": "PrivateSubnet4",
+                "path": "UrlMaliciousProd/VpcLambda/PrivateSubnet4",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet5": {
+                "id": "PrivateSubnet5",
+                "path": "UrlMaliciousProd/VpcLambda/PrivateSubnet5",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet6": {
+                "id": "PrivateSubnet6",
+                "path": "UrlMaliciousProd/VpcLambda/PrivateSubnet6",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.173.2"
+            }
+          },
+          "PrivateAccessSg": {
+            "id": "PrivateAccessSg",
+            "path": "UrlMaliciousProd/PrivateAccessSg",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.173.2"
+            }
+          },
+          "LogGroup": {
+            "id": "LogGroup",
+            "path": "UrlMaliciousProd/LogGroup",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousProd/LogGroup/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Logs::LogGroup",
+                  "aws:cdk:cloudformation:props": {
+                    "logGroupName": "/aws/lambda/UrlMalicious",
+                    "retentionInDays": 3,
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_logs.CfnLogGroup",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_logs.LogGroup",
+              "version": "2.173.2"
+            }
+          },
+          "Function": {
+            "id": "Function",
+            "path": "UrlMaliciousProd/Function",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "UrlMaliciousProd/Function/ServiceRole",
+                "children": {
+                  "ImportServiceRole": {
+                    "id": "ImportServiceRole",
+                    "path": "UrlMaliciousProd/Function/ServiceRole/ImportServiceRole",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.173.2"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "UrlMaliciousProd/Function/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          },
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+                              ]
+                            ]
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "AzureRepository",
+                            "value": "MasivSms/sms-url-malicious"
+                          },
+                          {
+                            "key": "Component",
+                            "value": "SmsUrlMaliciousApi"
+                          },
+                          {
+                            "key": "CostCenter",
+                            "value": "SMS"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                      "version": "2.173.2"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Role",
+                  "version": "2.173.2"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousProd/Function/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "imageUri": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                4,
+                                {
+                                  "Fn::Split": [
+                                    ":",
+                                    {
+                                      "Fn::GetAtt": [
+                                        "repository9F1A3F0B",
+                                        "Arn"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            ".dkr.ecr.",
+                            {
+                              "Fn::Select": [
+                                3,
+                                {
+                                  "Fn::Split": [
+                                    ":",
+                                    {
+                                      "Fn::GetAtt": [
+                                        "repository9F1A3F0B",
+                                        "Arn"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            ".",
+                            {
+                              "Ref": "AWS::URLSuffix"
+                            },
+                            "/",
+                            {
+                              "Ref": "repository9F1A3F0B"
+                            },
+                            ":latest"
+                          ]
+                        ]
+                      }
+                    },
+                    "environment": {
+                      "variables": {
+                        "FILE_NAME_MODEL": "trained_model.joblib",
+                        "FILE_NAME_VECTORIZER": "vectorizer.joblib",
+                        "LoggingLevel": "Warning",
+                        "BUCKET_NAME": {
+                          "Ref": "modelsurlmaliciousD24BF224"
+                        }
+                      }
+                    },
+                    "functionName": "UrlMalicious",
+                    "memorySize": 512,
+                    "packageType": "Image",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "FunctionServiceRole675BB04A",
+                        "Arn"
+                      ]
+                    },
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ],
+                    "timeout": 120,
+                    "vpcConfig": {
+                      "subnetIds": [
+                        "subnet-0108b3db769e84a87",
+                        "subnet-054ff387a16c3a7e9",
+                        "subnet-003bec9e52dfb6715",
+                        "subnet-0ef9099ad2c320d82",
+                        "subnet-0cd8943bbd0c51100",
+                        "subnet-0273387152ea3190d"
+                      ],
+                      "securityGroupIds": [
+                        "sg-043a4d3eaca796c64"
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_lambda.Function",
+              "version": "2.173.2"
+            }
+          },
+          "Policy": {
+            "id": "Policy",
+            "path": "UrlMaliciousProd/Policy",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousProd/Policy/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                  "aws:cdk:cloudformation:props": {
+                    "policyDocument": {
+                      "Statement": [
+                        {
+                          "Action": [
+                            "s3:GetObject",
+                            "s3:ListBucket",
+                            "ssm:GetParametersByPath"
+                          ],
+                          "Effect": "Allow",
+                          "Resource": [
+                            "arn:aws:ssm:us-east-1:908902414259:parameter/*",
+                            {
+                              "Fn::Join": [
+                                "",
+                                [
+                                  "arn:aws:s3:::",
+                                  {
+                                    "Ref": "modelsurlmaliciousD24BF224"
+                                  },
+                                  "/*"
+                                ]
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "policyName": "Policy23B91518",
+                    "roles": [
+                      {
+                        "Ref": "FunctionServiceRole675BB04A"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_iam.Policy",
+              "version": "2.173.2"
+            }
+          },
+          "VpcApiGateway": {
+            "id": "VpcApiGateway",
+            "path": "UrlMaliciousProd/VpcApiGateway",
+            "children": {
+              "PublicSubnet1": {
+                "id": "PublicSubnet1",
+                "path": "UrlMaliciousProd/VpcApiGateway/PublicSubnet1",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet2": {
+                "id": "PublicSubnet2",
+                "path": "UrlMaliciousProd/VpcApiGateway/PublicSubnet2",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet3": {
+                "id": "PublicSubnet3",
+                "path": "UrlMaliciousProd/VpcApiGateway/PublicSubnet3",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet4": {
+                "id": "PublicSubnet4",
+                "path": "UrlMaliciousProd/VpcApiGateway/PublicSubnet4",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet5": {
+                "id": "PublicSubnet5",
+                "path": "UrlMaliciousProd/VpcApiGateway/PublicSubnet5",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PublicSubnet6": {
+                "id": "PublicSubnet6",
+                "path": "UrlMaliciousProd/VpcApiGateway/PublicSubnet6",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet1": {
+                "id": "PrivateSubnet1",
+                "path": "UrlMaliciousProd/VpcApiGateway/PrivateSubnet1",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet2": {
+                "id": "PrivateSubnet2",
+                "path": "UrlMaliciousProd/VpcApiGateway/PrivateSubnet2",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet3": {
+                "id": "PrivateSubnet3",
+                "path": "UrlMaliciousProd/VpcApiGateway/PrivateSubnet3",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet4": {
+                "id": "PrivateSubnet4",
+                "path": "UrlMaliciousProd/VpcApiGateway/PrivateSubnet4",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet5": {
+                "id": "PrivateSubnet5",
+                "path": "UrlMaliciousProd/VpcApiGateway/PrivateSubnet5",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              },
+              "PrivateSubnet6": {
+                "id": "PrivateSubnet6",
+                "path": "UrlMaliciousProd/VpcApiGateway/PrivateSubnet6",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.173.2"
+            }
+          },
+          "UrlMaliciousApi": {
+            "id": "UrlMaliciousApi",
+            "path": "UrlMaliciousProd/UrlMaliciousApi",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousProd/UrlMaliciousApi/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::RestApi",
+                  "aws:cdk:cloudformation:props": {
+                    "apiKeySourceType": "HEADER",
+                    "endpointConfiguration": {
+                      "types": [
+                        "PRIVATE"
+                      ]
+                    },
+                    "name": "UrlMaliciousApi",
+                    "policy": {
+                      "Statement": [
+                        {
+                          "Action": "execute-api:Invoke",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "AWS": "*"
+                          },
+                          "Resource": "*"
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.CfnRestApi",
+                  "version": "2.173.2"
+                }
+              },
+              "Deployment": {
+                "id": "Deployment",
+                "path": "UrlMaliciousProd/UrlMaliciousApi/Deployment",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "UrlMaliciousProd/UrlMaliciousApi/Deployment/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Deployment",
+                      "aws:cdk:cloudformation:props": {
+                        "description": "Automatically created by the RestApi construct",
+                        "restApiId": {
+                          "Ref": "UrlMaliciousApiFBBC78E5"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnDeployment",
+                      "version": "2.173.2"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.Deployment",
+                  "version": "2.173.2"
+                }
+              },
+              "DeploymentStage.Prod": {
+                "id": "DeploymentStage.Prod",
+                "path": "UrlMaliciousProd/UrlMaliciousApi/DeploymentStage.Prod",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "UrlMaliciousProd/UrlMaliciousApi/DeploymentStage.Prod/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Stage",
+                      "aws:cdk:cloudformation:props": {
+                        "deploymentId": {
+                          "Ref": "UrlMaliciousApiDeploymentF1E2B662fcbd7ea556b63935ce634d8399d0a671"
+                        },
+                        "restApiId": {
+                          "Ref": "UrlMaliciousApiFBBC78E5"
+                        },
+                        "stageName": "Prod",
+                        "tags": [
+                          {
+                            "key": "AzureRepository",
+                            "value": "MasivSms/sms-url-malicious"
+                          },
+                          {
+                            "key": "Component",
+                            "value": "SmsUrlMaliciousApi"
+                          },
+                          {
+                            "key": "CostCenter",
+                            "value": "SMS"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnStage",
+                      "version": "2.173.2"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.Stage",
+                  "version": "2.173.2"
+                }
+              },
+              "Endpoint": {
+                "id": "Endpoint",
+                "path": "UrlMaliciousProd/UrlMaliciousApi/Endpoint",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnOutput",
+                  "version": "2.173.2"
+                }
+              },
+              "Default": {
+                "id": "Default",
+                "path": "UrlMaliciousProd/UrlMaliciousApi/Default",
+                "children": {
+                  "model": {
+                    "id": "model",
+                    "path": "UrlMaliciousProd/UrlMaliciousApi/Default/model",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "UrlMaliciousProd/UrlMaliciousApi/Default/model/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::ApiGateway::Resource",
+                          "aws:cdk:cloudformation:props": {
+                            "parentId": {
+                              "Fn::GetAtt": [
+                                "UrlMaliciousApiFBBC78E5",
+                                "RootResourceId"
+                              ]
+                            },
+                            "pathPart": "model",
+                            "restApiId": {
+                              "Ref": "UrlMaliciousApiFBBC78E5"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.CfnResource",
+                          "version": "2.173.2"
+                        }
+                      },
+                      "url-malicious": {
+                        "id": "url-malicious",
+                        "path": "UrlMaliciousProd/UrlMaliciousApi/Default/model/url-malicious",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "UrlMaliciousProd/UrlMaliciousApi/Default/model/url-malicious/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::ApiGateway::Resource",
+                              "aws:cdk:cloudformation:props": {
+                                "parentId": {
+                                  "Ref": "UrlMaliciousApimodel55388A97"
+                                },
+                                "pathPart": "url-malicious",
+                                "restApiId": {
+                                  "Ref": "UrlMaliciousApiFBBC78E5"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_apigateway.CfnResource",
+                              "version": "2.173.2"
+                            }
+                          },
+                          "POST": {
+                            "id": "POST",
+                            "path": "UrlMaliciousProd/UrlMaliciousApi/Default/model/url-malicious/POST",
+                            "children": {
+                              "ApiPermission.UrlMaliciousProdUrlMaliciousApi705507B6.POST..model.url-malicious": {
+                                "id": "ApiPermission.UrlMaliciousProdUrlMaliciousApi705507B6.POST..model.url-malicious",
+                                "path": "UrlMaliciousProd/UrlMaliciousApi/Default/model/url-malicious/POST/ApiPermission.UrlMaliciousProdUrlMaliciousApi705507B6.POST..model.url-malicious",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                                  "aws:cdk:cloudformation:props": {
+                                    "action": "lambda:InvokeFunction",
+                                    "functionName": {
+                                      "Fn::GetAtt": [
+                                        "Function76856677",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "principal": "apigateway.amazonaws.com",
+                                    "sourceArn": {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:aws:execute-api:us-east-1:908902414259:",
+                                          {
+                                            "Ref": "UrlMaliciousApiFBBC78E5"
+                                          },
+                                          "/",
+                                          {
+                                            "Ref": "UrlMaliciousApiDeploymentStageProd7ED8729E"
+                                          },
+                                          "/POST/model/url-malicious"
+                                        ]
+                                      ]
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_lambda.CfnPermission",
+                                  "version": "2.173.2"
+                                }
+                              },
+                              "ApiPermission.Test.UrlMaliciousProdUrlMaliciousApi705507B6.POST..model.url-malicious": {
+                                "id": "ApiPermission.Test.UrlMaliciousProdUrlMaliciousApi705507B6.POST..model.url-malicious",
+                                "path": "UrlMaliciousProd/UrlMaliciousApi/Default/model/url-malicious/POST/ApiPermission.Test.UrlMaliciousProdUrlMaliciousApi705507B6.POST..model.url-malicious",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
+                                  "aws:cdk:cloudformation:props": {
+                                    "action": "lambda:InvokeFunction",
+                                    "functionName": {
+                                      "Fn::GetAtt": [
+                                        "Function76856677",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "principal": "apigateway.amazonaws.com",
+                                    "sourceArn": {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          "arn:aws:execute-api:us-east-1:908902414259:",
+                                          {
+                                            "Ref": "UrlMaliciousApiFBBC78E5"
+                                          },
+                                          "/test-invoke-stage/POST/model/url-malicious"
+                                        ]
+                                      ]
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_lambda.CfnPermission",
+                                  "version": "2.173.2"
+                                }
+                              },
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "UrlMaliciousProd/UrlMaliciousApi/Default/model/url-malicious/POST/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::Method",
+                                  "aws:cdk:cloudformation:props": {
+                                    "apiKeyRequired": true,
+                                    "authorizationType": "NONE",
+                                    "httpMethod": "POST",
+                                    "integration": {
+                                      "type": "AWS_PROXY",
+                                      "uri": {
+                                        "Fn::Join": [
+                                          "",
+                                          [
+                                            "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/",
+                                            {
+                                              "Fn::GetAtt": [
+                                                "Function76856677",
+                                                "Arn"
+                                              ]
+                                            },
+                                            "/invocations"
+                                          ]
+                                        ]
+                                      },
+                                      "integrationHttpMethod": "POST"
+                                    },
+                                    "methodResponses": [
+                                      {
+                                        "statusCode": "200",
+                                        "responseModels": {
+                                          "application/json": "Empty"
+                                        }
+                                      }
+                                    ],
+                                    "resourceId": {
+                                      "Ref": "UrlMaliciousApimodelurlmalicious57C82D22"
+                                    },
+                                    "restApiId": {
+                                      "Ref": "UrlMaliciousApiFBBC78E5"
+                                    }
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_apigateway.CfnMethod",
+                                  "version": "2.173.2"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_apigateway.Method",
+                              "version": "2.173.2"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_apigateway.Resource",
+                          "version": "2.173.2"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.Resource",
+                      "version": "2.173.2"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.ResourceBase",
+                  "version": "2.173.2"
+                }
+              },
+              "urlMalicious-UsagePlan": {
+                "id": "urlMalicious-UsagePlan",
+                "path": "UrlMaliciousProd/UrlMaliciousApi/urlMalicious-UsagePlan",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "UrlMaliciousProd/UrlMaliciousApi/urlMalicious-UsagePlan/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::UsagePlan",
+                      "aws:cdk:cloudformation:props": {
+                        "apiStages": [
+                          {
+                            "apiId": {
+                              "Ref": "UrlMaliciousApiFBBC78E5"
+                            },
+                            "stage": {
+                              "Ref": "UrlMaliciousApiDeploymentStageProd7ED8729E"
+                            },
+                            "throttle": {}
+                          }
+                        ],
+                        "tags": [
+                          {
+                            "key": "AzureRepository",
+                            "value": "MasivSms/sms-url-malicious"
+                          },
+                          {
+                            "key": "Component",
+                            "value": "SmsUrlMaliciousApi"
+                          },
+                          {
+                            "key": "CostCenter",
+                            "value": "SMS"
+                          }
+                        ],
+                        "usagePlanName": "urlMalicious"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnUsagePlan",
+                      "version": "2.173.2"
+                    }
+                  },
+                  "UsagePlanKeyResource:UrlMaliciousProdurlmaliciouskey5E3415E8": {
+                    "id": "UsagePlanKeyResource:UrlMaliciousProdurlmaliciouskey5E3415E8",
+                    "path": "UrlMaliciousProd/UrlMaliciousApi/urlMalicious-UsagePlan/UsagePlanKeyResource:UrlMaliciousProdurlmaliciouskey5E3415E8",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::UsagePlanKey",
+                      "aws:cdk:cloudformation:props": {
+                        "keyId": {
+                          "Ref": "urlmaliciouskey0A2908EA"
+                        },
+                        "keyType": "API_KEY",
+                        "usagePlanId": {
+                          "Ref": "UrlMaliciousApiurlMaliciousUsagePlan38958055"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_apigateway.CfnUsagePlanKey",
+                      "version": "2.173.2"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.UsagePlan",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_apigateway.LambdaRestApi",
+              "version": "2.173.2"
+            }
+          },
+          "url-malicious-key": {
+            "id": "url-malicious-key",
+            "path": "UrlMaliciousProd/url-malicious-key",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "UrlMaliciousProd/url-malicious-key/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::ApiGateway::ApiKey",
+                  "aws:cdk:cloudformation:props": {
+                    "enabled": true,
+                    "name": "url-malicious-key",
+                    "tags": [
+                      {
+                        "key": "AzureRepository",
+                        "value": "MasivSms/sms-url-malicious"
+                      },
+                      {
+                        "key": "Component",
+                        "value": "SmsUrlMaliciousApi"
+                      },
+                      {
+                        "key": "CostCenter",
+                        "value": "SMS"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_apigateway.CfnApiKey",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_apigateway.ApiKey",
+              "version": "2.173.2"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "UrlMaliciousProd/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "UrlMaliciousProd/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.173.2"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.0.0"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "UrlMaliciousProd/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.173.2"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "UrlMaliciousProd/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.173.2"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.173.2"
+        }
+      },
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "constructs.Construct",
+          "version": "10.0.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "aws-cdk-lib.App",
+      "version": "2.173.2"
+    }
+  }
+}

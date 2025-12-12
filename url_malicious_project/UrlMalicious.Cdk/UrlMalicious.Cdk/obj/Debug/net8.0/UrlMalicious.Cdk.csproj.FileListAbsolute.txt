@@ -1,0 +1,5 @@
+C:\Users\yvillalobos\Documents\masiv\python\UrlMalicious.Cdk\UrlMalicious.Cdk\obj\Debug\net8.0\UrlMalicious.Cdk.csproj.AssemblyReference.cache
+C:\Users\yvillalobos\Documents\masiv\python\UrlMalicious.Cdk\UrlMalicious.Cdk\obj\Debug\net8.0\UrlMalicious.Cdk.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yvillalobos\Documents\masiv\python\UrlMalicious.Cdk\UrlMalicious.Cdk\obj\Debug\net8.0\UrlMalicious.Cdk.AssemblyInfoInputs.cache
+C:\Users\yvillalobos\Documents\masiv\python\UrlMalicious.Cdk\UrlMalicious.Cdk\obj\Debug\net8.0\UrlMalicious.Cdk.AssemblyInfo.cs
+C:\Users\yvillalobos\Documents\masiv\python\UrlMalicious.Cdk\UrlMalicious.Cdk\obj\Debug\net8.0\UrlMalicious.Cdk.csproj.CoreCompileInputs.cache

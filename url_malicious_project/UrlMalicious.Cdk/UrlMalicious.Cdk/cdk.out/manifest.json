@@ -1,0 +1,383 @@
+{
+  "version": "38.0.1",
+  "artifacts": {
+    "UrlMaliciousLabs.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "UrlMaliciousLabs.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "UrlMaliciousLabs": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://919471278046/us-east-1",
+      "properties": {
+        "templateFile": "UrlMaliciousLabs.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "AzureRepository": "MasivSms/sms-url-malicious",
+          "Component": "SmsUrlMaliciousApi",
+          "CostCenter": "SMS"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::919471278046:role/cdk-hnb659fds-deploy-role-919471278046-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::919471278046:role/cdk-hnb659fds-cfn-exec-role-919471278046-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-919471278046-us-east-1/64d8d4a7991ec580639a9c5fc2b139c71d258fc682fc1691b6e2ae9f1e5e5571.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "UrlMaliciousLabs.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::919471278046:role/cdk-hnb659fds-lookup-role-919471278046-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "UrlMaliciousLabs.assets"
+      ],
+      "metadata": {
+        "/UrlMaliciousLabs": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "AzureRepository",
+                "Value": "MasivSms/sms-url-malicious"
+              },
+              {
+                "Key": "Component",
+                "Value": "SmsUrlMaliciousApi"
+              },
+              {
+                "Key": "CostCenter",
+                "Value": "SMS"
+              }
+            ]
+          }
+        ],
+        "/UrlMaliciousLabs/models-url-malicious/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelsurlmaliciousD24BF224"
+          }
+        ],
+        "/UrlMaliciousLabs/repository/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "repository9F1A3F0B"
+          }
+        ],
+        "/UrlMaliciousLabs/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogGroupF5B46931"
+          }
+        ],
+        "/UrlMaliciousLabs/Function/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FunctionServiceRole675BB04A"
+          }
+        ],
+        "/UrlMaliciousLabs/Function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Function76856677"
+          }
+        ],
+        "/UrlMaliciousLabs/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Policy23B91518"
+          }
+        ],
+        "/UrlMaliciousLabs/UrlMaliciousApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiFBBC78E5"
+          }
+        ],
+        "/UrlMaliciousLabs/UrlMaliciousApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiDeploymentF1E2B662a968e58ad95b268e7794e75805862ddf"
+          }
+        ],
+        "/UrlMaliciousLabs/UrlMaliciousApi/DeploymentStage.Labs/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiDeploymentStageLabsFCF948A2"
+          }
+        ],
+        "/UrlMaliciousLabs/UrlMaliciousApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiEndpoint72668ADD"
+          }
+        ],
+        "/UrlMaliciousLabs/UrlMaliciousApi/Default/model/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApimodel55388A97"
+          }
+        ],
+        "/UrlMaliciousLabs/UrlMaliciousApi/Default/model/url-malicious/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApimodelurlmalicious57C82D22"
+          }
+        ],
+        "/UrlMaliciousLabs/UrlMaliciousApi/Default/model/url-malicious/POST/ApiPermission.UrlMaliciousLabsUrlMaliciousApi958DB491.POST..model.url-malicious": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApimodelurlmaliciousPOSTApiPermissionUrlMaliciousLabsUrlMaliciousApi958DB491POSTmodelurlmalicious0702916A"
+          }
+        ],
+        "/UrlMaliciousLabs/UrlMaliciousApi/Default/model/url-malicious/POST/ApiPermission.Test.UrlMaliciousLabsUrlMaliciousApi958DB491.POST..model.url-malicious": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApimodelurlmaliciousPOSTApiPermissionTestUrlMaliciousLabsUrlMaliciousApi958DB491POSTmodelurlmalicious2B4A6E0D"
+          }
+        ],
+        "/UrlMaliciousLabs/UrlMaliciousApi/Default/model/url-malicious/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApimodelurlmaliciousPOST4E8AFC12"
+          }
+        ],
+        "/UrlMaliciousLabs/UrlMaliciousApi/urlMalicious-UsagePlan/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiurlMaliciousUsagePlan38958055"
+          }
+        ],
+        "/UrlMaliciousLabs/UrlMaliciousApi/urlMalicious-UsagePlan/UsagePlanKeyResource:UrlMaliciousLabsurlmaliciouskey9306A6E9": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiurlMaliciousUsagePlanUsagePlanKeyResourceUrlMaliciousLabsurlmaliciouskey9306A6E9FD27F627"
+          }
+        ],
+        "/UrlMaliciousLabs/url-malicious-key/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlmaliciouskey0A2908EA"
+          }
+        ],
+        "/UrlMaliciousLabs/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/UrlMaliciousLabs/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/UrlMaliciousLabs/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "UrlMaliciousLabs"
+    },
+    "UrlMaliciousProd.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "UrlMaliciousProd.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "UrlMaliciousProd": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://908902414259/us-east-1",
+      "properties": {
+        "templateFile": "UrlMaliciousProd.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "AzureRepository": "MasivSms/sms-url-malicious",
+          "Component": "SmsUrlMaliciousApi",
+          "CostCenter": "SMS"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::908902414259:role/cdk-hnb659fds-deploy-role-908902414259-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::908902414259:role/cdk-hnb659fds-cfn-exec-role-908902414259-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-908902414259-us-east-1/d2944a8f09239659cd66cb4c2ac3eec406fb1fcc90c595a4eac52a6857222597.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "UrlMaliciousProd.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::908902414259:role/cdk-hnb659fds-lookup-role-908902414259-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "UrlMaliciousProd.assets"
+      ],
+      "metadata": {
+        "/UrlMaliciousProd": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "AzureRepository",
+                "Value": "MasivSms/sms-url-malicious"
+              },
+              {
+                "Key": "Component",
+                "Value": "SmsUrlMaliciousApi"
+              },
+              {
+                "Key": "CostCenter",
+                "Value": "SMS"
+              }
+            ]
+          }
+        ],
+        "/UrlMaliciousProd/models-url-malicious/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelsurlmaliciousD24BF224"
+          }
+        ],
+        "/UrlMaliciousProd/repository/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "repository9F1A3F0B"
+          }
+        ],
+        "/UrlMaliciousProd/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogGroupF5B46931"
+          }
+        ],
+        "/UrlMaliciousProd/Function/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FunctionServiceRole675BB04A"
+          }
+        ],
+        "/UrlMaliciousProd/Function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Function76856677"
+          }
+        ],
+        "/UrlMaliciousProd/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Policy23B91518"
+          }
+        ],
+        "/UrlMaliciousProd/UrlMaliciousApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiFBBC78E5"
+          }
+        ],
+        "/UrlMaliciousProd/UrlMaliciousApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiDeploymentF1E2B662fcbd7ea556b63935ce634d8399d0a671"
+          }
+        ],
+        "/UrlMaliciousProd/UrlMaliciousApi/DeploymentStage.Prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiDeploymentStageProd7ED8729E"
+          }
+        ],
+        "/UrlMaliciousProd/UrlMaliciousApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiEndpoint72668ADD"
+          }
+        ],
+        "/UrlMaliciousProd/UrlMaliciousApi/Default/model/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApimodel55388A97"
+          }
+        ],
+        "/UrlMaliciousProd/UrlMaliciousApi/Default/model/url-malicious/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApimodelurlmalicious57C82D22"
+          }
+        ],
+        "/UrlMaliciousProd/UrlMaliciousApi/Default/model/url-malicious/POST/ApiPermission.UrlMaliciousProdUrlMaliciousApi705507B6.POST..model.url-malicious": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApimodelurlmaliciousPOSTApiPermissionUrlMaliciousProdUrlMaliciousApi705507B6POSTmodelurlmaliciousB178FE3E"
+          }
+        ],
+        "/UrlMaliciousProd/UrlMaliciousApi/Default/model/url-malicious/POST/ApiPermission.Test.UrlMaliciousProdUrlMaliciousApi705507B6.POST..model.url-malicious": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApimodelurlmaliciousPOSTApiPermissionTestUrlMaliciousProdUrlMaliciousApi705507B6POSTmodelurlmalicious929642EF"
+          }
+        ],
+        "/UrlMaliciousProd/UrlMaliciousApi/Default/model/url-malicious/POST/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApimodelurlmaliciousPOST4E8AFC12"
+          }
+        ],
+        "/UrlMaliciousProd/UrlMaliciousApi/urlMalicious-UsagePlan/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiurlMaliciousUsagePlan38958055"
+          }
+        ],
+        "/UrlMaliciousProd/UrlMaliciousApi/urlMalicious-UsagePlan/UsagePlanKeyResource:UrlMaliciousProdurlmaliciouskey5E3415E8": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UrlMaliciousApiurlMaliciousUsagePlanUsagePlanKeyResourceUrlMaliciousProdurlmaliciouskey5E3415E8DA6D9547"
+          }
+        ],
+        "/UrlMaliciousProd/url-malicious-key/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "urlmaliciouskey0A2908EA"
+          }
+        ],
+        "/UrlMaliciousProd/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/UrlMaliciousProd/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/UrlMaliciousProd/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "UrlMaliciousProd"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
