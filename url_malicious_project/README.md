@@ -6,7 +6,7 @@
 Se presenta el diseño de un sistema automatizado para la clasificación de URLs con el fin de fortalecer los procesos de comunicación y prevenir la propagación de enlaces maliciosos. La propuesta se basa en una arquitectura orientada a eventos que analiza cada URL enviada por un usuario y determina si su contenido es legítimo o potencialmente dañino. Cuando se detecta una URL maliciosa, el sistema envía automáticamente un correo electrónico al remitente informando que el mensaje no pudo ser entregado por motivos de seguridad. Por el contrario, si la URL es clasificada como legítima, se envía un mensaje SMS al destinatario notificando la recepción correcta del enlace. Este enfoque permite optimizar la gestión de mensajes, reducir riesgos asociados al fraude digital y mejorar la experiencia del usuario mediante respuestas oportunas y automatizadas.
 
 ## 🔨 Arquitectura propuesta
-<img src="img/arquitectura.png" width="500"/>
+<img src="img/arquitectura.png"/>
 
 ## 🔨 Prototipo
 <img src="img/prototipo.png"/>
